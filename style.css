@@ -267,3 +267,27 @@
   border-style: solid;
   color: #000;
 }
+
+a.skip-link {
+  position:absolute;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:-999;
+}
+
+a.skip-link:focus, a.skip-link:active {
+  color: #fff;
+  background-color:#000;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto; 
+  margin: 10px 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-align:center;
+  font-size:1.2em;
+  z-index:999;
+}
