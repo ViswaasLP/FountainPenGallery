@@ -11,50 +11,52 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" 
-      type="image/png" 
-      href="./Assets/nib_favicon.png">
+    <link rel="icon" type="image/png" href="./Assets/nib_favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald&display=swap" rel="stylesheet">
 </head>
 
 <body style="margin: 0;">
+    <!-- Skiplink -->
     <a class="skip-link" href="#main">Skip to main content</a>
-    <div class="video-container">
 
+    <!-- Background video container -->
+    <div class="video-container">
         <video autoplay muted loop id="backgroundVideo">
             <source src="./Assets/WritingPencil.mp4" type="video/mp4">
-
         </video>
     </div>
+
+    <!-- Navigation region -->
     <nav class="navbar">
         <div class="NavigationInnerContainer">
-            <div class="logoContainer"><a href="./index.html" class="brand"><img src="./Assets/ecrivezLogo.png" width="66"
-                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px" alt="Go to Ecrivez homepage" /></a>
+            <div class="logoContainer"><a href="./index.html" class="brand"><img src="./Assets/ecrivezLogo.png"
+                        width="66" sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
+                        alt="Go to Ecrivez homepage" /></a>
                 <div class="logoHeadingContainer">
                     <span class="titleTextLogo">Écrivez</span>
                 </div>
             </div>
-            <div class="navigationLinksContainer"><a href="./index.html" class="link-block">Home</a><a href="./penCare.html"
-                    class="link-block">Pen Care</a><a href="#" class="link-block">Contact</a></div>
-        </div>
-    </nav>
-    <div class="heroContainer" id="main">
-
-        <div class="heroContainerMain">
-            <div class="heroHeadingContainer">
-                <h1 class="titleText">Welcome to the Fountain Pen Gallery</h1>
+            <div class="navigationLinksContainer"><a href="./index.html" class="link-block">Home</a><a
+                    href="./penCare.html" class="link-block">Pen Care</a><a href="#" class="link-block">Contact</a>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <!-- Section container within the video background. Contains the play/pause button. -->
     <section class="section">
-        <div class="videoPauseContainer"><button aria-label="Pause the video" onclick="myFunction()" href="#"
+        <div class="heroContainer" id="main">
+            <div class="heroContainerMain">
+                <div class="heroHeadingContainer">
+                    <h1 class="titleText">Welcome to the Fountain Pen Gallery</h1>
+                </div>
+            </div>
+        </div>
+        <div class="videoPauseContainer"><button aria-label="Pause the video" onclick="controlMedia()" href="#"
                 class="pausebutton">⏸️</button></div>
-        
+
     </section>
 
-
-
-
+    <!-- Javscript file -->
     <script src="./script.js"></script>
 </body>
 
