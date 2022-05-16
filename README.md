@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="./Assets/ecrivezLogo_black.png" alt="Logo" width="80" height="80">
+    <img src="./Assets/ecrivezLogo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Fountain Pen Gallery</h3>
