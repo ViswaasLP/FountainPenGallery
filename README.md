@@ -103,33 +103,20 @@ See the [open issues](https://github.com/ViswaasLP/FountainPenGallery/issues) fo
 
 ## Unit Testing Methods
 
-In order to
+In order to make sure the website adheres to WCAG AA standards, a testing methodology is established. They cover the various scenarios a website would be accessed.
 
 ### Keyboard user scenario
 
+The user would use only the keyboard to navigate through the site. Tab orders and visual focus indicators would be tested. Functionality of componnents as well.
+
 ### Screen reader scenario
+
+The user would use the JAWS screen reader and will navigate through the site with the keyboard. The states, roles and accessible names would be tested.
 
 ### AMP Manual Testing
 
-### Installation
+A thorough testing procedure containing multiple guidelines that the website should adhere to. These guidelines directly reference from the WCAG AA guidelines.
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
