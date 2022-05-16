@@ -16,7 +16,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Issues][issues-shield]][issues-url]
+[![Issues][issues-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -148,6 +148,6 @@ Project Link: [Fountain Pen Gallery](https://viswaasprabu.com/FountainPenGallery
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+
 [issues-url]: https://github.com/ViswaasLP/FountainPenGallery/issues
 [product-screenshot]: ./Assets/FountainPenGallery.png
