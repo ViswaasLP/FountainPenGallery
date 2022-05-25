@@ -1,11 +1,15 @@
-var video = document.getElementById("backgroundVideo");
+let video = document.getElementById("backgroundVideo");
+let accordionTrigger = document.getElementsByClassName("penCareAccordionTrigger");
+let pauseButton = document.querySelector(".pausebutton");
+let iterator;
 
-var acc = document.getElementsByClassName("penCareAccordionTrigger");
-var i;
 
-var pauseButton = document.querySelector(".pausebutton");
-
-function myFunction() {
+/**
+ * Plays/Pauses the video when user clicks on the play/pause respectively. 
+ * @author Viswaas
+ * @return null 
+ */
+function controlMedia() {
   if (video.paused) {
     video.play();
     pauseButton.innerHTML = "⏸️";
@@ -17,8 +21,13 @@ function myFunction() {
   }
 }
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
+/**
+ * Displays/Hides the accordion when user clicks on the accordion trigger. 
+ * @author Viswaas
+ * @return null 
+ */
+for (iterator = 0; iterator < accordionTrigger.length; iterator++) {
+  accordionTrigger[iterator].addEventListener("click", function () {
 
     this.classList.toggle("active");
 
@@ -30,3 +39,4 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
