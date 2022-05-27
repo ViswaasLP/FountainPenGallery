@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fountain Pen Gallery </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="./Assets/nib_favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body class="penCareBody" style="margin: 0;">
+    <!-- Skiplink -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+
+
+    <!-- Navigation region -->
+    <nav class="navbar">
+        <div class="NavigationInnerContainer">
+            <div class="logoContainer"><a href="./index.html" class="brand"><img src="./Assets/ecrivezLogo.png"
+                        width="66" sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
+                        alt="Go to Ecrivez homepage" /></a>
+                <div class="logoHeadingContainer">
+                    <span class="titleTextLogo">Écrivez</span>
+                </div>
+            </div>
+            <div class="navigationLinksContainer"><a href="./index.html" class="link-block">Home</a><a
+                    href="./penCare.html" class="link-block">Pen Care</a><a href="#" class="link-block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section container within the video background. Contains the play/pause button. -->
+    <section class="heroContainer">
+        <div class="LoginContainer">
+            <div class="header">
+                <h2>Sign Up</h2>
+            </div>
+            
+            <form class = "form" id = "form">
+                <h5>* indicates required fields.</h5>
+                <div class="form-control">
+                    <label for="first">First Name*</label>
+                    <input aria-describedby="firstName" type="text" placeholder="ex. John" id = "first">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small id="firstName" aria-hidden="true"></small>
+                </div>
+                <div class="form-control">
+                    <label for="last">Last Name*</label>
+                    <input aria-describedby="lastName" type="text" placeholder="ex. Doe" id = "last">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small id = "lastName" aria-hidden="true"></small>
+                </div>
+                <div class="form-control">
+                    <label for="username">Username*</label>
+                    <input aria-describedby="user" type="text" placeholder="ex. johndoe" id = "username">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small id = "user" aria-hidden="true"></small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password*</label>
+                    <input aria-describedby="pass passwordLists" type="password" placeholder="Type password" id = "password">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small id = "pass" aria-hidden="true"></small>               
+                    <figure id = "passwordLists">
+                        <figcaption style="color: black;">Password must contain atleast</figcaption>
+                    <ul>
+                    <li class="lowercase-char">one lowercase character [a-z]</li>
+                    <li class="uppercase-char">one uppercase character [A-Z]</li>
+                    <li class="number-char">one number [0-9]</li>
+                    <li class="eight-char">8 characters</li>
+                    </ul>
+                    </figure>
+                
+                </div>
+                <div class="form-control">
+                    <label for="password2"> Confirm Password*</label>
+                    <input aria-describedby="confirmPassword" type="password" placeholder="Re-type password" id = "password2">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small id = "confirmPassword" aria-hidden="true" ></small>
+                </div>
+               
+                <button type = "submit">Create account</button>
+                <p class="message">Already have an account? <a href="./account.html" >Sign In</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Javscript file -->
+    <script src="./SignUp.js"></script>
+</body>
+
+</html>

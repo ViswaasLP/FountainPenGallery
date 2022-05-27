@@ -16,8 +16,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Issues][issues-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">

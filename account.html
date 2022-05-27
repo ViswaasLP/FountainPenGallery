@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Fountain Pen Gallery</title>
+    <title>Fountain Pen Gallery </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
@@ -15,16 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald&display=swap" rel="stylesheet">
 </head>
 
-<body style="margin: 0;">
+<body class="penCareBody" style="margin: 0;">
     <!-- Skiplink -->
     <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- Background video container -->
-    <div class="video-container">
-        <video autoplay muted loop id="backgroundVideo">
-            <source src="./Assets/WritingPencil.mp4" type="video/mp4">
-        </video>
-    </div>
+
 
     <!-- Navigation region -->
     <nav class="navbar">
@@ -37,23 +32,34 @@
                 </div>
             </div>
             <div class="navigationLinksContainer"><a href="./index.html" class="link-block">Home</a><a
-                    href="./penCare.html" class="link-block">Pen Care</a><a href="./account.html" class="link-block">Account</a>
+                    href="./penCare.html" class="link-block">Pen Care</a><a href="#" class="link-block">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Section container within the video background. Contains the play/pause button. -->
-    <section class="section">
-        <div class="heroContainer" id="main">
-            <div class="heroContainerMain">
-                <div class="heroHeadingContainer">
-                    <h1 class="titleText">Welcome to the Fountain Pen Gallery</h1>
-                </div>
+    <section class="heroContainer">
+        <div class="LoginContainer">
+            <div class="header">
+                <h2>Login</h2>
             </div>
+            <form class="form" id="form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input aria-describedby="message1" type="text" placeholder="username" id="username">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small aria-hidden="true" id="message1"></small>
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input aria-describedby="message2" type="password" placeholder="password" id="password">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small aria-hidden="true" id="message2"></small>
+                </div>
+                <button type="submit">Login</button>
+                <p class="message">Not registered? <a href="SignUp.html">Create an account</a></p>
+            </form>
         </div>
-        <div class="videoPauseContainer"><button aria-label="Pause the video" onclick="controlMedia()" href="#"
-                class="pausebutton">⏸️</button></div>
-
     </section>
 
     <!-- Javscript file -->
