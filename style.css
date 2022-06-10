@@ -223,7 +223,6 @@
 
 .penCareAccordionTrigger {
   font-family: Oswald, sans-serif;
-
   border-style: solid;
   background-color: #eee;
   color: #444;
@@ -292,7 +291,6 @@ a.skip-link:focus, a.skip-link:active {
   z-index:999;
 }
 
-
 .LoginContainer{
   border-radius: 8px;
   background-color:rgb(255, 255, 255);
@@ -360,13 +358,10 @@ a.skip-link:focus, a.skip-link:active {
   right: 10px;
 }
 
-
 .form-control.blank i.fa-exclamation-circle{
   visibility: visible;
   color:  #e74c3c;
 }
-
-
 
 .form-control small{
   display: none;
@@ -381,10 +376,6 @@ a.skip-link:focus, a.skip-link:active {
   color:  #e74c3c;
 
 }
-
-
-
-
 
 .form button{
   background-color: #0d191a;
