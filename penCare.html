@@ -46,13 +46,24 @@
         <h2 class="penCareContainerTitle">Pen Care</h2>
         <div class="penCareAccordion">
           <!-- Accordion Trigger -->
-          <button class="penCareAccordionTrigger">
+          <button
+            onclick="myFunction()"
+            id="accordionTrigger"
+            aria-expanded="false"
+            aria-controls="ExpandedAccordionContainer"
+            class="penCareAccordionTrigger"
+          >
             <h3 class="penCareAccordionTriggerHeading">
               How to clean your pen?
             </h3>
           </button>
           <!-- Expanded accordion section -->
-          <div class="penCareAccordionExpandedRegion" role="region">
+          <div
+            aria-labelledby="accordionTrigger"
+            id="ExpandedAccordionContainer"
+            class="penCareAccordionExpandedRegion"
+            role="region"
+          >
             <span
               >There are many ways to clean your fountain pen. (Coming
               soon....)</span
@@ -60,14 +71,23 @@
           </div>
         </div>
         <!-- Modal button trigger -->
-        <button id="modalButton">Help! My nib is bent!</button>
+        <button id="modalButton">
+          Help! My nib is bent!<span class="sr-only">Opens Modal</span>
+        </button>
 
         <!-- The Modal -->
         <div id="modalContainer" class="modal">
           <!-- Modal content -->
-          <div class="modal-content">
+          <div
+            role="dialog"
+            aria-label="modal dialog"
+            aria-modal="true"
+            class="modal-content"
+          >
             <!-- Close button -->
-            <button id="modalClose" class="close">&times;</button>
+            <button aria-label="Close the modal" id="modalClose" class="close">
+              &times;
+            </button>
             <p>Pry it back to place with your thumb and index finger.</p>
             <!-- Link to Sign in Page -->
             <a id="modalLink" href="./account.html"
@@ -82,6 +102,20 @@
       let closeButton = document.getElementById("modalClose");
       let modalLink = document.getElementById("modalLink");
       let modalbtn = document.getElementById("modalButton");
+
+      function myFunction() {
+        var x = document
+          .getElementById("accordionTrigger")
+          .getAttribute("aria-expanded");
+        if (x == "true") {
+          x = "false";
+        } else {
+          x = "true";
+        }
+        document
+          .getElementById("accordionTrigger")
+          .setAttribute("aria-expanded", x);
+      }
       //When the user clicks on the modal trigger button.
       modalbtn.onclick = function () {
         modal.style.display = "block";
