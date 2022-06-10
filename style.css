@@ -223,7 +223,6 @@
 
 .penCareAccordionTrigger {
   font-family: Oswald, sans-serif;
-
   border-style: solid;
   background-color: #eee;
   color: #444;
@@ -292,7 +291,6 @@ a.skip-link:focus, a.skip-link:active {
   z-index:999;
 }
 
-
 .LoginContainer{
   border-radius: 8px;
   background-color:rgb(255, 255, 255);
@@ -360,13 +358,10 @@ a.skip-link:focus, a.skip-link:active {
   right: 10px;
 }
 
-
 .form-control.blank i.fa-exclamation-circle{
   visibility: visible;
   color:  #e74c3c;
 }
-
-
 
 .form-control small{
   display: none;
@@ -381,10 +376,6 @@ a.skip-link:focus, a.skip-link:active {
   color:  #e74c3c;
 
 }
-
-
-
-
 
 .form button{
   background-color: #0d191a;
@@ -425,4 +416,42 @@ a.skip-link:focus, a.skip-link:active {
   margin: 15px 0 0;
   color: #0d191a;
   font-size: 12px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
