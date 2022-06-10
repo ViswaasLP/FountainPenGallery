@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
     <meta charset="utf-8" />
@@ -21,8 +17,10 @@
   </head>
 
   <body class="penCareBody" style="margin: 0">
+    <!-- Navigation Panel -->
     <nav class="navbar">
       <div class="NavigationInnerContainer">
+        <!-- Logo container -->
         <div class="logoContainer">
           <a href="./index.html" class="brand"
             ><img
@@ -42,15 +40,18 @@
         </div>
       </div>
     </nav>
+    <!-- Main section container -->
     <section class="heroContainer">
       <div class="penCareContainer">
         <h2 class="penCareContainerTitle">Pen Care</h2>
         <div class="penCareAccordion">
+          <!-- Accordion Trigger -->
           <button class="penCareAccordionTrigger">
             <h3 class="penCareAccordionTriggerHeading">
               How to clean your pen?
             </h3>
           </button>
+          <!-- Expanded accordion section -->
           <div class="penCareAccordionExpandedRegion" role="region">
             <span
               >There are many ways to clean your fountain pen. (Coming
@@ -58,14 +59,17 @@
             >
           </div>
         </div>
-        <button id="myBtn">Help! My nib is bent!</button>
+        <!-- Modal button trigger -->
+        <button id="modalButton">Help! My nib is bent!</button>
 
         <!-- The Modal -->
-        <div id="myModal" class="modal">
+        <div id="modalContainer" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
+            <!-- Close button -->
             <button id="modalClose" class="close">&times;</button>
-            <p>Some text in the Modal..</p>
+            <p>Pry it back to place with your thumb and index finger.</p>
+            <!-- Link to Sign in Page -->
             <a id="modalLink" href="./account.html"
               >SIgn In to acquire more info!</a
             >
@@ -74,12 +78,12 @@
       </div>
     </section>
     <script>
-      let modal = document.getElementById("myModal");
+      let modal = document.getElementById("modalContainer");
       let closeButton = document.getElementById("modalClose");
       let modalLink = document.getElementById("modalLink");
-      let btn = document.getElementById("myBtn");
+      let modalbtn = document.getElementById("modalButton");
       //When the user clicks on the modal trigger button.
-      btn.onclick = function () {
+      modalbtn.onclick = function () {
         modal.style.display = "block";
         modalLink.focus();
       };
