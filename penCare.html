@@ -4,48 +4,126 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="./Assets/nib_favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald&display=swap" rel="stylesheet">
-</head>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="./Assets/nib_favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="penCareBody" style="margin: 0;">
-
+  <body class="penCareBody" style="margin: 0">
     <nav class="navbar">
-        <div class="NavigationInnerContainer">
-            <div class="logoContainer"><a href="./index.html" class="brand"><img src="./Assets/ecrivezLogo.png"
-                        width="66" sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
-                        alt="Ecrivez Logo" /></a>
-                <div class="logoHeadingContainer">
-                    <span class="titleTextLogo">Écrivez</span>
-                </div>
-            </div>
-            <div class="navigationLinksContainer"><a href="./index.html" class="link-block">Home</a><a
-                    href="./penCare.html" class="link-block">Pen Care</a><a href="./account.html" class="link-block">Account</a>
-            </div>
+      <div class="NavigationInnerContainer">
+        <div class="logoContainer">
+          <a href="./index.html" class="brand"
+            ><img
+              src="./Assets/ecrivezLogo.png"
+              width="66"
+              sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
+              alt="Ecrivez Logo"
+          /></a>
+          <div class="logoHeadingContainer">
+            <span class="titleTextLogo">Écrivez</span>
+          </div>
         </div>
+        <div class="navigationLinksContainer">
+          <a href="./index.html" class="link-block">Home</a
+          ><a href="./penCare.html" class="link-block">Pen Care</a
+          ><a href="./account.html" class="link-block">Account</a>
+        </div>
+      </div>
     </nav>
     <section class="heroContainer">
-        <div class="penCareContainer">
-            <h2 class="penCareContainerTitle">Pen Care</h2>
-            <div class="penCareAccordion">
-                <button class="penCareAccordionTrigger" ><h3 class="penCareAccordionTriggerHeading">How to clean your pen?</h3></button>
-                <div class="penCareAccordionExpandedRegion" role="region">
-                    <span>There are many ways to clean your fountain pen. (Coming soon....)</span>
-                </div>
-            </div>
+      <div class="penCareContainer">
+        <h2 class="penCareContainerTitle">Pen Care</h2>
+        <div class="penCareAccordion">
+          <button class="penCareAccordionTrigger">
+            <h3 class="penCareAccordionTriggerHeading">
+              How to clean your pen?
+            </h3>
+          </button>
+          <div class="penCareAccordionExpandedRegion" role="region">
+            <span
+              >There are many ways to clean your fountain pen. (Coming
+              soon....)</span
+            >
+          </div>
         </div>
-    </section>
-    <script src="./script.js"></script>
-</body>
+        <button id="myBtn">Help! My nib is bent!</button>
 
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <button id="modalClose" class="close">&times;</button>
+            <p>Some text in the Modal..</p>
+            <a id="modalLink" href="./account.html"
+              >SIgn In to acquire more info!</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let modal = document.getElementById("myModal");
+      let closeButton = document.getElementById("modalClose");
+      let modalLink = document.getElementById("modalLink");
+      let btn = document.getElementById("myBtn");
+      //When the user clicks on the modal trigger button.
+      btn.onclick = function () {
+        modal.style.display = "block";
+        modalLink.focus();
+      };
+
+      // When the user activates the close button, close the modal
+      closeButton.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Scenario: If user clicks anywhere outside modal, close the modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Function to control focus within the modal dialog.
+      document.addEventListener("keydown", function (e) {
+        // Boolean for checking if user presses "Tab"
+        let isTabPressed = e.key === "Tab" || e.keyCode === 9;
+
+        // If Tab isn't pressed
+        if (!isTabPressed) {
+          return;
+        }
+        // If Shift key is pressed for "Shift + TAB" combination
+        if (e.shiftKey) {
+          if (document.activeElement === closeButton) {
+            // Add focus for the last focusable element
+            modalLink.focus();
+            e.preventDefault();
+          }
+        } else {
+          // If "TAB" key is pressed
+          if (document.activeElement === modalLink) {
+            // If focus has reached to last focusable element, then shift focus to first element in modal.
+            closeButton.focus();
+            e.preventDefault();
+          }
+        }
+      });
+
+      closeButton.focus();
+    </script>
+    <script src="./script.js"></script>
+  </body>
 </html>
