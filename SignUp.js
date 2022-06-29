@@ -161,3 +161,12 @@ form.addEventListener("submit", (e) => {
   }
   checkInputs();
 });
+
+function myFunction() {
+  var x = document.getElementById("navigationLinksContainer_mobileId");
+  if (x.className === "navigationLinksContainer_mobile") {
+    x.className += " active";
+  } else {
+    x.className = "navigationLinksContainer_mobile";
+  }
+}

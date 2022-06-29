@@ -40,3 +40,13 @@ for (iterator = 0; iterator < accordionTrigger.length; iterator++) {
   });
 }
 
+
+
+function myFunction() {
+  var x = document.getElementById("navigationLinksContainer_mobileId");
+  if (x.className === "navigationLinksContainer_mobile") {
+    x.className += " active";
+  } else {
+    x.className = "navigationLinksContainer_mobile";
+  }
+}

@@ -18,28 +18,28 @@
 
   <body class="penCareBody" style="margin: 0">
     <!-- Navigation Panel -->
-    <nav class="navbar">
-      <div class="NavigationInnerContainer">
-        <!-- Logo container -->
-        <div class="logoContainer">
-          <a href="./index.html" class="brand"
-            ><img
-              src="./Assets/ecrivezLogo.png"
-              width="66"
-              sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
-              alt="Ecrivez Logo"
-          /></a>
-          <div class="logoHeadingContainer">
-            <span class="titleTextLogo">Écrivez</span>
+    <nav class="topnav" id="navbar">
+      <a href="./index.html">
+          <div class="logoContainer"><span class="brand"><img src="./Assets/ecrivezLogo.png" width="66"
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
+                      alt="Go to Ecrivez homepage" /></span>
+              <div class="logoHeadingContainer">
+                  <span class="titleTextLogo">Écrivez</span>
+              </div>
           </div>
-        </div>
-        <div class="navigationLinksContainer">
-          <a href="./index.html" class="link-block">Home</a
-          ><a href="./penCare.html" class="link-block">Pen Care</a
-          ><a href="./account.html" class="link-block">Account</a>
-        </div>
+      </a>
+      <div class="navigationLinksContainer">
+          <a href="./penCare.html" class="link-block">Pen Care</a>
+          <a href="./account.html" class="link-block">Account</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              ☰
+          </a>
       </div>
-    </nav>
+  </nav>
+  <div class="navigationLinksContainer_mobile" id="navigationLinksContainer_mobileId">
+    <a href="./penCare.html" class="link-block">Pen Care</a>
+    <a href="./account.html" class="link-block">Account</a>
+</div>
     <!-- Main section container -->
     <section class="heroContainer">
       <div class="penCareContainer">
@@ -161,6 +161,15 @@
       });
 
       closeButton.focus();
+
+      function myFunction() {
+  var x = document.getElementById("navigationLinksContainer_mobileId");
+  if (x.className === "navigationLinksContainer_mobile") {
+    x.className += " active";
+  } else {
+    x.className = "navigationLinksContainer_mobile";
+  }
+}
     </script>
     <script src="./script.js"></script>
   </body>

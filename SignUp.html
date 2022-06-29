@@ -22,20 +22,28 @@
 
 
     <!-- Navigation region -->
-    <nav class="navbar">
-        <div class="NavigationInnerContainer">
-            <div class="logoContainer"><a href="./index.html" class="brand"><img src="./Assets/ecrivezLogo.png"
-                        width="66" sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
-                        alt="Go to Ecrivez homepage" /></a>
+    <nav class="topnav" id="navbar">
+        <a href="./index.html">
+            <div class="logoContainer"><span class="brand"><img src="./Assets/ecrivezLogo.png" width="66"
+                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 62.890625px, 66px"
+                        alt="Go to Ecrivez homepage" /></span>
                 <div class="logoHeadingContainer">
                     <span class="titleTextLogo">Écrivez</span>
                 </div>
             </div>
-            <div class="navigationLinksContainer"><a href="./index.html" class="link-block">Home</a><a
-                    href="./penCare.html" class="link-block">Pen Care</a><a href="#" class="link-block">Account</a>
-            </div>
+        </a>
+        <div class="navigationLinksContainer">
+            <a href="./penCare.html" class="link-block">Pen Care</a>
+            <a href="./account.html" class="link-block">Account</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                ☰
+            </a>
         </div>
     </nav>
+    <div class="navigationLinksContainer_mobile" id="navigationLinksContainer_mobileId">
+        <a href="./penCare.html" class="link-block">Pen Care</a>
+        <a href="./account.html" class="link-block">Account</a>
+    </div>
 
     <!-- Section container within the video background. Contains the play/pause button. -->
     <section class="heroContainer">
